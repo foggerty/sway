@@ -9,9 +9,7 @@
                      "custom/space", "memory",
                      "custom/space", "sway/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["battery",    "custom/space",
-                      "network",    "custom/space",
-                      "pulseaudio", "custom/space",
+    "modules-right": ["pulseaudio", "custom/space",
                       "tray",       "custom/space"],
 
 

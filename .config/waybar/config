@@ -1,5 +1,5 @@
 {
-    "layer": "top",
+   "layer": "top",
     "spacing": 30,
     "height": 35,
     "margin-left": 10,
@@ -17,15 +17,11 @@
         "format": "\t"
     },
 
-    "battery": {
-        "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""]
-    },
-
 
     "clock": {
-        "format-alt": "{:%a, %d %b  %H:%M}"
+        "format": "{:%a, %d %b  %H:%M}"
     },
+
 
     "tray": {
         "icon-size": 21,
@@ -46,39 +42,12 @@
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
+        "format": "Volume:{volume}%",
         "on-click": "pavucontrol"
-    },
-
-
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%)  ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "on-click-right": "foot bash -i -c nmtui"
     },
 
 
     "sway/workspaces": {
         "format": "{name}"
-    },
-
+    }
 }

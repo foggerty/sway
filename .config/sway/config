@@ -1,4 +1,4 @@
-xwayland disable
+xwayland enable
 
 
 ###############################################################################
@@ -15,7 +15,7 @@ set $down   Down
 set $mod Mod4
 
 # Your preferred terminal emulator
-set $term alacritty
+set $term foot
 
 # Colors
 set $transparant #00000040
@@ -164,6 +164,7 @@ bindsym $mod+v splitv
 
 # Switch the current container between different layout styles
 bindsym $mod+s layout toggle split
+bindsym $mod+Shift+s layout stacked
 bindsym $mod+t layout tabbed
 bindsym $mod+Shift+f floating toggle
 
@@ -216,6 +217,8 @@ mode "resize" {
     bindsym $up resize grow height 10px
     bindsym $down resize shrink height 10px
     bindsym $right resize grow width 10px
+    bindsym Next resize grow height 100px
+    bindsym Prior resize shrink height 100px
 
     # Return to default mode
     bindsym Return mode "default"

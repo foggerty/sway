@@ -9,11 +9,19 @@
                      "custom/space", "memory",
                      "custom/space", "sway/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["battery",    "custom/space",
-                      "network",    "custom/space",
-                      "pulseaudio", "custom/space",
-                      "tray",       "custom/space"],
+    "modules-right": ["battery",        "custom/space",
+                      "network",        "custom/space",
+                      "pulseaudio",     "custom/space",
+                      "tray",
+                      "idle_inhibitor", "custom/space"],
 
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
 
     "custom/space": {
         "format": "\t"

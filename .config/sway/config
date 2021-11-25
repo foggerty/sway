@@ -1,4 +1,4 @@
-xwayland enable
+xwayland disable
 
 
 ###############################################################################
@@ -42,7 +42,7 @@ bindsym $mod+L exec 'wlogout -p layer-shell'
 bindsym $mod+Escape reload
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+SHIFT+q exec swaynag -t warning -m 'Exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+SHIFT+q exec swaymsg exit
 
 
 ################################################################################

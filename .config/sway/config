@@ -1,7 +1,7 @@
-xwayland disable
+xwayland enable
 default_orientation auto
-shmlog off
-debuglog off
+#shmlog off
+#debuglog off
 
 ###############################################################################
 ### Variables

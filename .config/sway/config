@@ -1,5 +1,7 @@
 xwayland disable
-
+default_orientation auto
+shmlog off
+debuglog off
 
 ###############################################################################
 ### Variables
@@ -16,10 +18,6 @@ set $mod Mod4
 
 # Your preferred terminal emulator
 set $term foot
-
-# Colors
-set $transparant #00000040
-
 
 
 ################################################################################
@@ -61,6 +59,7 @@ input "1739:30383:DELL08AF:00_06CB:76AF_Touchpad" {
 
 input "type:keyboard" {
       # Find options with `man 7 xkeyboard-config`
+      xkb_model "dell"
       xkb_options  ctrl:nocaps
       repeat_delay 300
       repeat_rate 40
@@ -141,32 +140,29 @@ bindsym $mod+w kill
 # mouse button for dragging.
 floating_modifier $mod normal
 
-# Moving around
+# Moving between windows
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
 
-# Move the focused window with the same, but add Shift
+# Move the focused window
 bindsym $mod+Shift+$left move left
 bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
-
-# Note: workspaces can have any name you want, not just numbers.
-# We just use 1-10 as the default.
 
 # You can "split" the current object of your focus with
 # $mod+b or $mod+v, for horizontal and vertical splits
 # respectively.
 bindsym $mod+h splith
 bindsym $mod+v splitv
+bindsym $mod+Shift+e layout toggle split
 
 # Switch the current container between different layout styles
 bindsym $mod+s layout toggle split
 bindsym $mod+Shift+s layout stacked
 bindsym $mod+t layout tabbed
-bindsym $mod+Shift+f floating toggle
 
 # Make the current focus fullscreen
 bindsym $mod+f fullscreen
@@ -228,7 +224,8 @@ bindsym $mod+r mode "resize"
 
 
 ################################################################################
-### Include defaults
+### Default applicaton states
 ################################################################################
 
-include /etc/sway/config.d/*
+for_window [class="a"] floating enable
+for_window [title="b"] floating enable

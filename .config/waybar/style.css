@@ -16,6 +16,7 @@ window#waybar {
 #clock
 #battery
 #cpu
+#pulseaudio
 #tray {
     margin: 14px 14px 14px 14px;
     min-width: 50px;

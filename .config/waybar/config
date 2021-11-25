@@ -12,7 +12,7 @@
     "modules-right": ["battery",        "custom/space",
                       "network",        "custom/space",
                       "pulseaudio",     "custom/space",
-                      "tray",
+                      "tray",           "custom/space",
                       "idle_inhibitor", "custom/space"],
 
     "idle_inhibitor": {
@@ -56,20 +56,12 @@
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-bluetooth-muted": "🔇",
+        "format-muted": "🔇",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "default": ["🔈", "🔉", "🔊"]
         },
         "on-click": "pavucontrol"
     },
@@ -77,10 +69,10 @@
 
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%)  ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
+        "format-wifi": "{essid}  ({signalStrength}%)  ",
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
         "on-click-right": "foot bash -i -c nmtui"

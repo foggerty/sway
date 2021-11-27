@@ -1,0 +1,42 @@
+* Sway Config
+Config files and a couple of default backgrounds that I use on sway.
+
+Curently two branches, laptop and desktop, but will probably merge laptop into master and nuke both soon; this config is (mostly) working fine for me in both environments.
+
+I've left comments in Sway's config detailing how to lookup things like mice/keyboards etc.
+
+** Requirements
+ - brightnessctl
+ - wlogout
+ - swayidle
+ - gvfs
+ - xorg-xwayland (if want to run X11 apps)
+ - [[https://google.com][Other stuff I've probably forgotten.]]
+
+** Bar - WayBar
+I choose this pretty much because most of the other Wayland compatible bars had uglier configurartion to setup.  I still want something as simple as Polynar for themeing though; I've never liked cascading style sheets.
+
+** Menu - Wofi
+Found here.
+It's a menu, it looks nice, it works for me.
+
+** Window manager - Foot
+Found here.
+I spent ages looking into getting Emacs to use the terminal colors, stared working on a custom theme, spend a lot of time swearing at the current state of Emacs theming, and then by accident found that if I spawned the emacs client from a new Bash shell launched from Foot, that I got the functionlity I was look for, I also found far, far too many commas, so fuck it, using em up here.
+
+** File Manager - Thunar
+Found here
+Really only used to make dealing with removable media
+
+* To Do
+ - [ ] Add GTK3 theme
+ - [ ] Add Kora icons
+ - [ ] Find out whhy Waybar "desktop" numbers are displayed in black
+ - [ ] Fix the annoying layout issues.
+ - [ ] Get volume/mute keys working.
+   - [ ] Use css to add a divider between items (i.e. right-border).
+   - [ ] Find better icons for pulseaudio.
+ - [ ] Script (Janet) to preiew different backends for py-wal?
+ - [ ]
+ - [ ] Custom kernel, fuck it - rice hard or erm, just install a regular destop and actualy have a life.  Damnit.....
+ - [ ] Add bluetooth suport at some point if just for completeness as a desktop!  Hardly ever use it, if at all.

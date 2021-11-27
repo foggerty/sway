@@ -1,42 +1,48 @@
 * Sway Config
 Config files and a couple of default backgrounds that I use on sway.
 
-Curently two branches, laptop and desktop, but will probably merge laptop into master and nuke both soon; this config is (mostly) working fine for me in both environments.
-
 I've left comments in Sway's config detailing how to lookup things like mice/keyboards etc.
 
+In regards to themes, if I run Emacs in terminal then I just need to setup a terminal theme and leave it at that; transparent Alacritty terminals round off the effect.  Setting the terminal theme is done with [[https://github.com/dylanaraps/pywal][pywal]], and while it does output a style that ~Waybar~ can use, it's not transparent.  Yes, I could link to it in another style, add the transparency there and then point ~Waybar~ at that...  But that's getting a tad fragile just to make something look pretty.  So far, white text and a shaded transparent background has worked with most wallpapers.
+
+The file manager has been setup with a neutral dark-ish theme that works kinda well with the default wallpaper.
+
+In other words, I want to set the terminal and Emacs theme by finding a nice wallpaper and that's all I then need to do.  Christ, I just realised how much time I've sunk into this bloody thing....  But yeah, set my Emacs theme by finding just the right wallpaper image that give me what I want.
+
+AND NOW THAT EVERYTHING IS NEARLY PERFECT THE FUCKING SCREEN STARTS TO FLICKER BRIEFLY ONCE EVERY FEW MINUTES FUCK WANK BASTARD
+
 ** Requirements
- - brightnessctl
- - wlogout
- - swayidle
- - gvfs
+ - [[https://github.com/Hummer12007/brightnessctl][brightnessctl]]
+ - [[https://github.com/ArtsyMacaw/wlogout][wlogout]]
+ - [[https://github.com/swaywm/swayidle][swayidle]]
+ - gvfs (so Thunar can be used to easily handle removable media)
  - xorg-xwayland (if want to run X11 apps)
  - [[https://google.com][Other stuff I've probably forgotten.]]
 
-** Bar - WayBar
-I choose this pretty much because most of the other Wayland compatible bars had uglier configurartion to setup.  I still want something as simple as Polynar for themeing though; I've never liked cascading style sheets.
+** Components
+*** Bar - [[https://github.com/Alexays/Waybar][WayBar]]
+I choose this simply because the other Wayland compatible bars had uglier configuration.
 
-** Menu - Wofi
-Found here.
+*** Menu - [[https://hg.sr.ht/~scoopta/wofi][Wofi]]
 It's a menu, it looks nice, it works for me.
+Note that it's in AUR (like most of these packages).
 
-** Window manager - Alacritty/Foot
-Found here.
-It all comes down to Emacs and theming.  Using foot an a slightly convoluted way to invoke Emacs, I can get Emacs to use the default terminal colours.  But with Alacritty, it uses the Emacs defaults.  Wait a minute....
+*** Terminal - [[https://github.com/alacritty/alacritty][Alacrity]]
+It's what the cool kids are using!  I think.
 
-** File Manager - Thunar
-Found here
-Really only used to make dealing with removable media less of a pain.
+*** File Manager - PCManFM
+Replacing Thunar, because it can still pickup the GTK theme when running on Wayland :)
 
 * To Do
- - [ ] Add GTK3 theme
- - [ ] Add Kora icons
+ - [ ] Find out why WayBar has takes ages to load after login, but not on subsequent startups?
+ - [ ] Add GTK3 theme (thunar)
+ - [ ] Add Kora icons (thunar)
  - [ ] Fix the annoying layout issues.
  - [ ] Get volume/mute keys working.
    - [ ] Use css to add a divider between items (i.e. right-border).
    - [ ] Find better icons for pulseaudio.
- - [ ] Script (Janet) to preiew different backends for py-wal?
- - [ ] Look into the Emacs theme again, if foot is causing stability issues, will need to go back to Alacritty.
  - [ ] Custom kernel, fuck it - rice hard or erm, just install a regular destop and actualy have a life.  Dammit.....
- - [ ] Add bluetooth suport at some point if just for completeness as a desktop!  Hardly ever use it, if at all.
+ - [ ] Add bluetooth suport at some point - if just for completeness as a desktop!  Hardly ever use it, if at all.
  - [X] Find out why Waybar "desktop" numbers are displayed in black
+ - [X] Apply that grub fix for XPS screen flickering.
+ - [X] Script to preview different backends for py-wal

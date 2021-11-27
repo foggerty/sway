@@ -1,0 +1,11 @@
+wal -i $1
+
+init_trap() {
+   echo "Hope this works"
+}
+
+trap init_trap INT
+
+swaybg --mode fill --image $1
+
+wal -i ~/Pictures/Wallpapers/current

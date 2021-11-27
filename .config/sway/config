@@ -95,7 +95,7 @@ gaps inner 10
 # inner|outer|horizontal|vertical|top|right|bottom|left
 
 
-###############################################################################
+################################################################################
 ### Application launchers
 ################################################################################
 
@@ -103,6 +103,7 @@ gaps inner 10
 bindsym $mod+Return exec $term
 
 # Emacs
+# 'em' is an alias for 'emacsclient -t'
 bindsym $mod+E exec 'alacritty -e bash -i -c em'
 
 # Start your launcher / menu

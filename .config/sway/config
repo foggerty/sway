@@ -17,7 +17,7 @@ set $down   Down
 set $mod Mod4
 
 # Your preferred terminal emulator
-set $term foot
+set $term alacritty
 
 
 ################################################################################
@@ -103,7 +103,7 @@ gaps inner 10
 bindsym $mod+Return exec $term
 
 # Emacs
-bindsym $mod+E exec 'foot bash -i -c em'
+bindsym $mod+E exec 'alacritty -e bash -i -c em'
 
 # Start your launcher / menu
 bindsym $mod+M exec 'wofi --show run'
@@ -157,12 +157,10 @@ bindsym $mod+Shift+$right move right
 # respectively.
 bindsym $mod+h splith
 bindsym $mod+v splitv
-bindsym $mod+Shift+e layout toggle split
 
 # Switch the current container between different layout styles
-bindsym $mod+s layout toggle split
-bindsym $mod+Shift+s layout stacked
-bindsym $mod+t layout tabbed
+bindsym $mod+Shift+s layout toggle split
+bindsym $mod+s layout toggle split tabbed stacking
 
 # Make the current focus fullscreen
 bindsym $mod+f fullscreen

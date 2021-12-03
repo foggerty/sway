@@ -75,7 +75,7 @@
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "on-click-right": "foot bash -i -c nmtui"
+        "on-click-right": "alacritty -e bash -i -c nmtui"
     },
 
 

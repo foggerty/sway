@@ -9,13 +9,11 @@ The file manager has been setup with a neutral dark-ish theme that works kinda w
 
 In other words, I want to set the terminal and Emacs theme by finding a nice wallpaper and that's all I then need to do.  Christ, I just realised how much time I've sunk into this bloody thing....  But yeah, set my Emacs theme by finding just the right wallpaper image that give me what I want.
 
-AND NOW THAT EVERYTHING IS NEARLY PERFECT THE FUCKING SCREEN STARTS TO FLICKER BRIEFLY ONCE EVERY FEW MINUTES FUCK WANK BASTARD
-
 ** Requirements
  - [[https://github.com/Hummer12007/brightnessctl][brightnessctl]]
- - [[https://github.com/ArtsyMacaw/wlogout][wlogout]]
+ - [[https://github.com/ArtsyMacaw/wlogout][wlogout]] (AUR)
  - [[https://github.com/swaywm/swayidle][swayidle]]
- - gvfs (so Thunar can be used to easily handle removable media)
+ - gvfs / gvfs-smb (so Thunar can be used to easily handle removable media and Windows monts)
  - xorg-xwayland (if want to run X11 apps)
  - [[https://google.com][Other stuff I've probably forgotten.]]
 
@@ -25,24 +23,25 @@ I choose this simply because the other Wayland compatible bars had uglier config
 
 *** Menu - [[https://hg.sr.ht/~scoopta/wofi][Wofi]]
 It's a menu, it looks nice, it works for me.
-Note that it's in AUR (like most of these packages).
+Note that it's in AUR
 
 *** Terminal - [[https://github.com/alacritty/alacritty][Alacrity]]
 It's what the cool kids are using!  I think.
 
 *** File Manager - PCManFM
-Replacing Thunar, because it can still pickup the GTK theme when running on Wayland :)
+Replacing Thunar because it can still pickup the GTK theme when running on Wayland :)
 
 * To Do
  - [ ] Find out why WayBar has takes ages to load after login, but not on subsequent startups?
- - [ ] Add GTK3 theme (thunar)
- - [ ] Add Kora icons (thunar)
- - [ ] Fix the annoying layout issues.
+ - [ ] Setup floating defaults for various apps
  - [ ] Get volume/mute keys working.
    - [ ] Use css to add a divider between items (i.e. right-border).
    - [ ] Find better icons for pulseaudio.
  - [ ] Custom kernel, fuck it - rice hard or erm, just install a regular destop and actualy have a life.  Dammit.....
  - [ ] Add bluetooth suport at some point - if just for completeness as a desktop!  Hardly ever use it, if at all.
+ - [X] Fix the annoying layout issues.
+ - [X] Add GTK3 theme (thunar)
+ - [X] Add Kora icons (thunar)
  - [X] Find out why Waybar "desktop" numbers are displayed in black
  - [X] Apply that grub fix for XPS screen flickering.
  - [X] Script to preview different backends for py-wal
